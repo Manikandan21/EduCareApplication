@@ -1,0 +1,1193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{00891016-FD1D-4CF9-BF3D-515B23B838CD}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ILogisticsApplication</RootNamespace>
+    <AssemblyName>ILogisticsApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\..\Client\05.Ooty crescent\Global Source\Application\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Rock.Core, Version=0.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rock.Core.0.9.5\lib\net45\Rock.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Academic\Academic.aspx" />
+    <Content Include="Academic\ExamSchedule.aspx" />
+    <Content Include="Academic\HomeworkManagement.aspx" />
+    <Content Include="Academic\Timetable.aspx" />
+    <Content Include="Attendance\InOutManagement.aspx" />
+    <Content Include="Configuration\Branches.aspx" />
+    <Content Include="Finance\StudentFeeStructure.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="Announcement\Events.aspx" />
+    <Content Include="Announcement\Noticeboard.aspx" />
+    <Content Include="Finance\CourseFeeStructure.aspx" />
+    <Content Include="Finance\FeeCollection.aspx" />
+    <Content Include="Finance\PaymentHistory.aspx" />
+    <Content Include="Resource\img\logo\logo.png" />
+    <Content Include="Resource\img\no_profile.png" />
+    <Content Include="Resource\js\Finance.js" />
+    <Content Include="UC\AppMessageUC.ascx" />
+    <Content Include="Attendance\MarkAttendance.aspx" />
+    <Content Include="Attendance\MarkHolidays.aspx" />
+    <Content Include="Attendance\ViewAttendance.aspx" />
+    <Content Include="Configuration\AssignTeacher.aspx" />
+    <Content Include="Configuration\CourseExamMapping.aspx" />
+    <Content Include="Configuration\Courses.aspx" />
+    <Content Include="Configuration\CourseSubjectMapping.aspx" />
+    <Content Include="Configuration\Department.aspx" />
+    <Content Include="Configuration\Exam.aspx" />
+    <Content Include="Configuration\HolidayMaster.aspx" />
+    <Content Include="Configuration\RoleMenuMapping.aspx" />
+    <Content Include="Configuration\Subject.aspx" />
+    <Content Include="Configuration\TimetableConfig.aspx" />
+    <Content Include="Configuration\UnlockUser.aspx" />
+    <Content Include="Configuration\ViewCourseExamMapping.aspx" />
+    <Content Include="Configuration\ViewCourseSubjectMapping.aspx" />
+    <Content Include="content\toastr.css" />
+    <Content Include="content\toastr.min.css" />
+    <Content Include="ErrorPage\404.html" />
+    <Content Include="ErrorPage\500.html" />
+    <Content Include="Error\404.aspx" />
+    <Content Include="Error\500.aspx" />
+    <Content Include="Gallery\ManageAlbum.aspx" />
+    <Content Include="Gallery\ViewAlbum.aspx" />
+    <Content Include="Gallery\ViewAlbumImage.aspx" />
+    <Content Include="Hostel\index.html" />
+    <Content Include="InternalMail\Compose.aspx" />
+    <Content Include="InternalMail\Inbox.aspx" />
+    <Content Include="Inventory\index.html" />
+    <Content Include="LandingPage\ChangePassword.aspx" />
+    <Content Include="LandingPage\Dashboard.aspx" />
+    <Content Include="Login\AdminLogin.aspx" />
+    <Content Include="Promotion\Promote.aspx" />
+    <Content Include="Promotion\ShuffleStudents.aspx" />
+    <Content Include="Resource\css\AjaxCalender.css" />
+    <Content Include="Resource\css\patterns\1.png" />
+    <Content Include="Resource\css\patterns\2.png" />
+    <Content Include="Resource\css\patterns\3.png" />
+    <Content Include="Resource\css\patterns\4.png" />
+    <Content Include="Resource\css\patterns\5.png" />
+    <Content Include="Resource\css\patterns\6.png" />
+    <Content Include="Resource\css\patterns\7.png" />
+    <Content Include="Resource\css\patterns\congruent_pentagon.png" />
+    <Content Include="Resource\css\patterns\header-profile-skin-1.png" />
+    <Content Include="Resource\css\patterns\header-profile-skin-2.png" />
+    <Content Include="Resource\css\patterns\header-profile-skin-3.png" />
+    <Content Include="Resource\css\patterns\header-profile.png" />
+    <Content Include="Resource\css\patterns\otis_redding.png" />
+    <Content Include="Resource\css\patterns\shattered.png" />
+    <Content Include="Resource\css\patterns\triangular.png" />
+    <Content Include="Resource\css\plugins\blueimp\css\blueimp-gallery-indicator.css" />
+    <Content Include="Resource\css\plugins\blueimp\css\blueimp-gallery-video.css" />
+    <Content Include="Resource\css\plugins\blueimp\css\blueimp-gallery.css" />
+    <Content Include="Resource\css\plugins\blueimp\css\blueimp-gallery.min.css" />
+    <Content Include="Resource\css\plugins\blueimp\css\demo.css" />
+    <Content Include="Resource\css\plugins\blueimp\img\error.png" />
+    <Content Include="Resource\css\plugins\blueimp\img\loading.gif" />
+    <Content Include="Resource\css\plugins\blueimp\img\play-pause.png" />
+    <Content Include="Resource\css\plugins\blueimp\img\video-play.png" />
+    <Content Include="Resource\css\plugins\datapicker\datepicker3.css" />
+    <Content Include="Resource\css\plugins\dataTables\datatables.min.css" />
+    <Content Include="Resource\css\plugins\fullcalendar\fullcalendar.css" />
+    <Content Include="Resource\css\plugins\fullcalendar\fullcalendar.print.css" />
+    <Content Include="Resource\css\plugins\iCheck\custom.css" />
+    <Content Include="Resource\css\plugins\iCheck\green%402x.png" />
+    <Content Include="Resource\css\plugins\iCheck\green.png" />
+    <Content Include="Resource\css\plugins\images\bootstrap-colorpicker\alpha-horizontal.png" />
+    <Content Include="Resource\css\plugins\images\bootstrap-colorpicker\alpha.png" />
+    <Content Include="Resource\css\plugins\images\bootstrap-colorpicker\hue-horizontal.png" />
+    <Content Include="Resource\css\plugins\images\bootstrap-colorpicker\hue.png" />
+    <Content Include="Resource\css\plugins\images\bootstrap-colorpicker\saturation.png" />
+    <Content Include="Resource\css\plugins\images\sort.png" />
+    <Content Include="Resource\css\plugins\images\sort_asc.png" />
+    <Content Include="Resource\css\plugins\images\sort_desc.png" />
+    <Content Include="Resource\css\plugins\images\sprite-skin-flat.png" />
+    <Content Include="Resource\css\plugins\images\sprite-skin-flat2.png" />
+    <Content Include="Resource\css\plugins\images\sprite-skin-nice.png" />
+    <Content Include="Resource\css\plugins\images\sprite-skin-simple.png" />
+    <Content Include="Resource\css\plugins\images\spritemap%402x.png" />
+    <Content Include="Resource\css\plugins\images\spritemap.png" />
+    <Content Include="Resource\css\plugins\jQueryUI\images\animated-overlay.gif" />
+    <Content Include="Resource\css\plugins\jQueryUI\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Resource\css\plugins\jQueryUI\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Resource\css\plugins\jQueryUI\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Resource\css\plugins\jQueryUI\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Resource\css\plugins\jQueryUI\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Resource\css\plugins\jQueryUI\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Resource\css\plugins\jQueryUI\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Resource\css\plugins\jQueryUI\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Resource\css\plugins\jQueryUI\images\ui-icons_222222_256x240.png" />
+    <Content Include="Resource\css\plugins\jQueryUI\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Resource\css\plugins\jQueryUI\images\ui-icons_454545_256x240.png" />
+    <Content Include="Resource\css\plugins\jQueryUI\images\ui-icons_888888_256x240.png" />
+    <Content Include="Resource\css\plugins\jQueryUI\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Resource\css\plugins\jQueryUI\jquery-ui-1.10.4.custom.min.css" />
+    <Content Include="Resource\css\plugins\jQueryUI\jquery-ui.css" />
+    <Content Include="Resource\css\plugins\ladda\ladda-themeless.min.css" />
+    <Content Include="Resource\css\plugins\ladda\ladda.min.css" />
+    <Content Include="Resource\css\plugins\summernote\summernote-bs3.css" />
+    <Content Include="Resource\css\plugins\summernote\summernote.css" />
+    <Content Include="Resource\css\plugins\sweetalert\sweetalert.css" />
+    <Content Include="Resource\css\plugins\toastr\toastr.min.css" />
+    <Content Include="Resource\css\style.css" />
+    <Content Include="Resource\font-awesome\css\font-awesome.css" />
+    <Content Include="Resource\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Resource\img\Album\newalbum.png" />
+    <Content Include="Resource\img\Album\no_image.png" />
+    <Content Include="Resource\img\attendance\absent.png" />
+    <Content Include="Resource\img\attendance\display\absent.png" />
+    <Content Include="Resource\img\attendance\display\Holiday.png" />
+    <Content Include="Resource\img\attendance\display\null.png" />
+    <Content Include="Resource\img\attendance\display\present.png" />
+    <Content Include="Resource\img\attendance\display\WeekEnd.png" />
+    <Content Include="Resource\img\attendance\Holiday.png" />
+    <Content Include="Resource\img\attendance\null.png" />
+    <Content Include="Resource\img\attendance\present.png" />
+    <Content Include="Resource\img\attendance\User\Absent.png" />
+    <Content Include="Resource\img\attendance\User\Holiday.png" />
+    <Content Include="Resource\img\attendance\User\Present.png" />
+    <Content Include="Resource\img\attendance\User\unmarked.png" />
+    <Content Include="Resource\img\attendance\User\WeekEnd.png" />
+    <Content Include="Resource\img\attendance\WeekEnd.png" />
+    <Content Include="Resource\img\profile_small.jpg" />
+    <Content Include="Resource\img\timeout-icon.png" />
+    <Content Include="Resource\js\bootstrap.js" />
+    <Content Include="Resource\js\bootstrap.min.js" />
+    <Content Include="Resource\js\DisplayMessage.js" />
+    <Content Include="Resource\js\DynamicMenuBinding.js" />
+    <Content Include="Resource\js\eduCareCommon.js" />
+    <Content Include="Resource\js\eduCareGallery.js" />
+    <Content Include="Resource\js\inspinia.js" />
+    <Content Include="Resource\js\jquery-2.1.1.js" />
+    <Content Include="Resource\js\jquery-ui-1.10.4.min.js" />
+    <Content Include="Resource\js\jquery-ui.custom.min.js" />
+    <Content Include="Resource\js\LoginAuthentication.js" />
+    <Content Include="Resource\js\MasterDataBinding.js" />
+    <Content Include="Resource\js\paging.js" />
+    <Content Include="Resource\js\plugins\chartJs\Chart.min.js" />
+    <Content Include="Resource\js\plugins\datapicker\bootstrap-datepicker.js" />
+    <Content Include="Resource\js\plugins\dataTables\datatables.min.js" />
+    <Content Include="Resource\js\plugins\easypiechart\easypiechart.js" />
+    <Content Include="Resource\js\plugins\easypiechart\jquery.easypiechart.js" />
+    <Content Include="Resource\js\plugins\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Resource\js\plugins\fullcalendar\moment.min.js" />
+    <Content Include="Resource\js\plugins\iCheck\icheck.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery-ui-i18n.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-af.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-ar-DZ.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-ar.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-az.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-be.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-bg.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-bs.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-ca.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-cs.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-cy-GB.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-da.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-de.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-el.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-en-AU.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-en-GB.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-en-NZ.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-eo.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-es.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-et.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-eu.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-fa.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-fi.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-fo.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-fr-CA.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-fr-CH.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-fr.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-gl.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-he.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-hi.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-hr.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-hu.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-hy.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-id.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-is.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-it.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-ja.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-ka.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-kk.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-km.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-ko.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-ky.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-lb.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-lt.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-lv.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-mk.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-ml.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-ms.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-nb.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-nl-BE.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-nl.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-nn.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-no.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-pl.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-pt-BR.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-pt.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-rm.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-ro.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-ru.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-sk.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-sl.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-sq.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-sr-SR.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-sr.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-sv.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-ta.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-th.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-tj.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-tr.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-uk.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-vi.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-zh-CN.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-zh-HK.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\i18n\jquery.ui.datepicker-zh-TW.min.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\images\animated-overlay.gif" />
+    <Content Include="Resource\js\plugins\jquery-ui\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Resource\js\plugins\jquery-ui\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Resource\js\plugins\jquery-ui\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Resource\js\plugins\jquery-ui\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Resource\js\plugins\jquery-ui\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Resource\js\plugins\jquery-ui\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Resource\js\plugins\jquery-ui\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Resource\js\plugins\jquery-ui\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Resource\js\plugins\jquery-ui\images\ui-icons_222222_256x240.png" />
+    <Content Include="Resource\js\plugins\jquery-ui\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Resource\js\plugins\jquery-ui\images\ui-icons_454545_256x240.png" />
+    <Content Include="Resource\js\plugins\jquery-ui\images\ui-icons_888888_256x240.png" />
+    <Content Include="Resource\js\plugins\jquery-ui\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Resource\js\plugins\jquery-ui\jquery-ui.css" />
+    <Content Include="Resource\js\plugins\jquery-ui\jquery-ui.js" />
+    <Content Include="Resource\js\plugins\jquery-ui\jquery-ui.min.css" />
+    <Content Include="Resource\js\plugins\jquery-ui\jquery-ui.min.js" />
+    <Content Include="Resource\js\plugins\ladda\ladda.jquery.min.js" />
+    <Content Include="Resource\js\plugins\ladda\ladda.min.js" />
+    <Content Include="Resource\js\plugins\ladda\spin.min.js" />
+    <Content Include="Resource\js\plugins\mask\jquery.maskedinput-1.2.2-co.min.js.js" />
+    <Content Include="Resource\js\plugins\metisMenu\jquery.metisMenu.js" />
+    <Content Include="Resource\js\plugins\pace\pace.min.js" />
+    <Content Include="Resource\js\plugins\slimscroll\jquery.slimscroll.js" />
+    <Content Include="Resource\js\plugins\slimscroll\jquery.slimscroll.min.js" />
+    <Content Include="Resource\js\plugins\summernote\summernote.min.js" />
+    <Content Include="Resource\js\plugins\sweetalert\sweetalert.min.js" />
+    <Content Include="Resource\js\plugins\toastr\toastr.min.js" />
+    <Content Include="Resource\js\plugins\upload\jquery-1.7.2.min.js" />
+    <Content Include="Resource\js\plugins\upload\jquery.uploadify-3.1.js" />
+    <Content Include="Resource\js\plugins\upload\jquery.uploadify-3.1.min.js" />
+    <Content Include="Resource\js\plugins\upload\uploadify-cancel.png" />
+    <Content Include="Resource\js\plugins\upload\uploadify.css" />
+    <Content Include="Resource\js\plugins\upload\uploadify.swf" />
+    <Content Include="Resource\js\plugins\Validation.js" />
+    <Content Include="Resource\js\SessionExpire.js" />
+    <Content Include="Resource\js\timeout-dialog.js" />
+    <Content Include="Resource\js\toastr.js" />
+    <Content Include="Students\StudentSearch.aspx" />
+    <Content Include="UC\AppMessageUC.ascx" />
+    <Content Include="ErrorPage\404.html" />
+    <Content Include="ErrorPage\500.html" />
+    <Content Include="Error\404.aspx" />
+    <Content Include="Error\500.aspx" />
+    <Content Include="Gallery\ManageAlbum.aspx" />
+    <Content Include="Gallery\ViewAlbum.aspx" />
+    <Content Include="Gallery\ViewAlbumImage.aspx" />
+    <Content Include="Hostel\index.html" />
+    <Content Include="Inventory\index.html" />
+    <Content Include="Resource\css\animate.css" />
+    <Content Include="Resource\css\bootstrap.css" />
+    <Content Include="Resource\css\bootstrap.min.css" />
+    <Content Include="Resource\css\GridPagination.css" />
+    <Content Include="Resource\css\patterns\1.png" />
+    <Content Include="Resource\css\patterns\2.png" />
+    <Content Include="Resource\css\patterns\3.png" />
+    <Content Include="Resource\css\patterns\4.png" />
+    <Content Include="Resource\css\patterns\5.png" />
+    <Content Include="Resource\css\patterns\6.png" />
+    <Content Include="Resource\css\patterns\7.png" />
+    <Content Include="Resource\css\patterns\congruent_pentagon.png" />
+    <Content Include="Resource\css\patterns\header-profile-skin-1.png" />
+    <Content Include="Resource\css\patterns\header-profile-skin-2.png" />
+    <Content Include="Resource\css\patterns\header-profile-skin-3.png" />
+    <Content Include="Resource\css\patterns\header-profile.png" />
+    <Content Include="Resource\css\patterns\otis_redding.png" />
+    <Content Include="Resource\css\patterns\shattered.png" />
+    <Content Include="Resource\css\patterns\triangular.png" />
+    <Content Include="Resource\css\plugins\datapicker\datepicker3.css" />
+    <Content Include="Resource\css\plugins\dataTables\datatables.min.css" />
+    <Content Include="Resource\css\plugins\fullcalendar\fullcalendar.css" />
+    <Content Include="Resource\css\plugins\fullcalendar\fullcalendar.print.css" />
+    <Content Include="Resource\css\plugins\iCheck\custom.css" />
+    <Content Include="Resource\css\plugins\iCheck\green%402x.png" />
+    <Content Include="Resource\css\plugins\iCheck\green.png" />
+    <Content Include="Resource\css\plugins\images\bootstrap-colorpicker\alpha-horizontal.png" />
+    <Content Include="Resource\css\plugins\images\bootstrap-colorpicker\alpha.png" />
+    <Content Include="Resource\css\plugins\images\bootstrap-colorpicker\hue-horizontal.png" />
+    <Content Include="Resource\css\plugins\images\bootstrap-colorpicker\hue.png" />
+    <Content Include="Resource\css\plugins\images\bootstrap-colorpicker\saturation.png" />
+    <Content Include="Resource\css\plugins\images\sort.png" />
+    <Content Include="Resource\css\plugins\images\sort_asc.png" />
+    <Content Include="Resource\css\plugins\images\sort_desc.png" />
+    <Content Include="Resource\css\plugins\images\sprite-skin-flat.png" />
+    <Content Include="Resource\css\plugins\images\sprite-skin-flat2.png" />
+    <Content Include="Resource\css\plugins\images\sprite-skin-nice.png" />
+    <Content Include="Resource\css\plugins\images\sprite-skin-simple.png" />
+    <Content Include="Resource\css\plugins\images\spritemap%402x.png" />
+    <Content Include="Resource\css\plugins\images\spritemap.png" />
+    <Content Include="Resource\css\plugins\jQueryUI\images\animated-overlay.gif" />
+    <Content Include="Resource\css\plugins\jQueryUI\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Resource\css\plugins\jQueryUI\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Resource\css\plugins\jQueryUI\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Resource\css\plugins\jQueryUI\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Resource\css\plugins\jQueryUI\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Resource\css\plugins\jQueryUI\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Resource\css\plugins\jQueryUI\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Resource\css\plugins\jQueryUI\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Resource\css\plugins\jQueryUI\images\ui-icons_222222_256x240.png" />
+    <Content Include="Resource\css\plugins\jQueryUI\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Resource\css\plugins\jQueryUI\images\ui-icons_454545_256x240.png" />
+    <Content Include="Resource\css\plugins\jQueryUI\images\ui-icons_888888_256x240.png" />
+    <Content Include="Resource\css\plugins\jQueryUI\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Resource\css\plugins\jQueryUI\jquery-ui-1.10.4.custom.min.css" />
+    <Content Include="Resource\css\plugins\jQueryUI\jquery-ui.css" />
+    <Content Include="Resource\css\plugins\ladda\ladda-themeless.min.css" />
+    <Content Include="Resource\css\plugins\ladda\ladda.min.css" />
+    <Content Include="Resource\css\plugins\summernote\summernote-bs3.css" />
+    <Content Include="Resource\css\plugins\summernote\summernote.css" />
+    <Content Include="Resource\css\plugins\sweetalert\sweetalert.css" />
+    <Content Include="Resource\css\plugins\toastr\toastr.min.css" />
+    <Content Include="Resource\font-awesome\css\font-awesome.css" />
+    <Content Include="Resource\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Resource\img\Album\newalbum.png" />
+    <Content Include="Resource\img\Album\no_image.png" />
+    <Content Include="Resource\img\attendance\absent.png" />
+    <Content Include="Resource\img\attendance\display\absent.png" />
+    <Content Include="Resource\img\attendance\display\Holiday.png" />
+    <Content Include="Resource\img\attendance\display\null.png" />
+    <Content Include="Resource\img\attendance\display\present.png" />
+    <Content Include="Resource\img\attendance\display\WeekEnd.png" />
+    <Content Include="Resource\img\attendance\Holiday.png" />
+    <Content Include="Resource\img\attendance\null.png" />
+    <Content Include="Resource\img\attendance\present.png" />
+    <Content Include="Resource\img\attendance\User\Absent.png" />
+    <Content Include="Resource\img\attendance\User\Holiday.png" />
+    <Content Include="Resource\img\attendance\User\Present.png" />
+    <Content Include="Resource\img\attendance\User\unmarked.png" />
+    <Content Include="Resource\img\attendance\User\WeekEnd.png" />
+    <Content Include="Resource\img\attendance\WeekEnd.png" />
+    <Content Include="Resource\skin\skin-config.html" />
+    <Content Include="content\toastr.scss" />
+    <Content Include="content\toastr.less" />
+    <Content Include="Handlers\DropdownBind.ashx" />
+    <Content Include="Handlers\ManageStudents.ashx" />
+    <Content Include="Handlers\ManageUser.ashx" />
+    <Content Include="Handlers\Communication.ashx" />
+    <Content Include="Handlers\CommunicationOperation.ashx" />
+    <Content Include="Handlers\Attendance.ashx" />
+    <Content Include="Handlers\AssignTeacher.ashx" />
+    <Content Include="Handlers\CourseMapping.ashx" />
+    <Content Include="Handlers\Announcement.ashx" />
+    <Content Include="Handlers\ImageHandler.ashx" />
+    <Content Include="Handlers\DownloadImage.ashx" />
+    <Content Include="Handlers\Timetable.ashx" />
+    <Content Include="Handlers\Logout.ashx" />
+    <Content Include="MasterPage\User.Master" />
+    <Content Include="Handlers\ApplicationConfig.ashx" />
+    <Content Include="Handlers\UserAttendance.ashx" />
+    <Content Include="Handlers\HolidayList.ashx" />
+    <Content Include="Handlers\Promote.ashx" />
+    <Content Include="Handlers\Shuffle.ashx" />
+    <Content Include="Handlers\ChangePassword.ashx" />
+    <Content Include="Handlers\UnlockUser.ashx" />
+    <Content Include="Handlers\Dashboard.ashx" />
+    <Content Include="Handlers\Transactions.ashx" />
+    <Content Include="Handlers\SmsApproval.ashx" />
+    <Content Include="Handlers\MasterPage.ashx" />
+    <Content Include="Handlers\SessionExtend.ashx" />
+    <Content Include="Handlers\FinanceDropDownLoader.ashx" />
+    <Content Include="Handlers\FinanceFeeManagement.ashx" />
+    <Content Include="Handlers\FinanceGetStudent.ashx" />
+    <Content Include="Handlers\FinancePaymentHistory.ashx" />
+    <Content Include="Handlers\FinanceFeeMappingStudent.ashx" />
+    <Content Include="Handlers\FinanceStudentFeeMappingSave.ashx" />
+    <Content Include="Handlers\FinanceDetailedStudentFeeAmount.ashx" />
+    <Content Include="Handlers\FinancePaymentCollection.ashx" />
+    <Content Include="Handlers\UserProfileImg.ashx" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
+    <None Include="Scripts\jquery-1.6.4-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.6.4.js" />
+    <Content Include="Scripts\jquery-1.6.4.min.js" />
+    <Content Include="Scripts\toastr.min.js" />
+    <Content Include="Sms\AppMessage.aspx" />
+    <Content Include="Sms\SmsApproval.aspx" />
+    <Content Include="Sms\UserMessage.aspx" />
+    <Content Include="Students\StudentEnrollment.aspx" />
+    <Content Include="Students\StudentInfo.aspx" />
+    <Content Include="Transport\index.html" />
+    <Content Include="UC\TimeoutControl.ascx" />
+    <Content Include="Users\Academic.aspx" />
+    <Content Include="Users\Attendance.aspx" />
+    <Content Include="Users\Dashboard.aspx" />
+    <Content Include="Users\ExamSchedule.aspx" />
+    <Content Include="Users\Homework.aspx" />
+    <Content Include="Users\login.aspx" />
+    <Content Include="Users\PersonalInfo.aspx" />
+    <Content Include="Users\Timetable.aspx" />
+    <Content Include="User\PersonalInfo.aspx" />
+    <Content Include="User\UserEnrollment.aspx" />
+    <Content Include="User\UserInfo.aspx" />
+    <Content Include="VendorManagement\index.html" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Academic\Academic.aspx.cs">
+      <DependentUpon>Academic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Academic\Academic.aspx.designer.cs">
+      <DependentUpon>Academic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Academic\ExamSchedule.aspx.cs">
+      <DependentUpon>ExamSchedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Academic\ExamSchedule.aspx.designer.cs">
+      <DependentUpon>ExamSchedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Academic\HomeworkManagement.aspx.cs">
+      <DependentUpon>HomeworkManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Academic\HomeworkManagement.aspx.designer.cs">
+      <DependentUpon>HomeworkManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Academic\Timetable.aspx.cs">
+      <DependentUpon>Timetable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Academic\Timetable.aspx.designer.cs">
+      <DependentUpon>Timetable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\InOutManagement.aspx.cs">
+      <DependentUpon>InOutManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\InOutManagement.aspx.designer.cs">
+      <DependentUpon>InOutManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\Branches.aspx.cs">
+      <DependentUpon>Branches.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Configuration\Branches.aspx.designer.cs">
+      <DependentUpon>Branches.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\StudentFeeStructure.aspx.cs">
+      <DependentUpon>StudentFeeStructure.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Finance\StudentFeeStructure.aspx.designer.cs">
+      <DependentUpon>StudentFeeStructure.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Announcement\Events.aspx.cs">
+      <DependentUpon>Events.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Announcement\Events.aspx.designer.cs">
+      <DependentUpon>Events.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Announcement\Noticeboard.aspx.cs">
+      <DependentUpon>Noticeboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Announcement\Noticeboard.aspx.designer.cs">
+      <DependentUpon>Noticeboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\CourseFeeStructure.aspx.cs">
+      <DependentUpon>CourseFeeStructure.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Finance\CourseFeeStructure.aspx.designer.cs">
+      <DependentUpon>CourseFeeStructure.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\FeeCollection.aspx.cs">
+      <DependentUpon>FeeCollection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Finance\FeeCollection.aspx.designer.cs">
+      <DependentUpon>FeeCollection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\PaymentHistory.aspx.cs">
+      <DependentUpon>PaymentHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Finance\PaymentHistory.aspx.designer.cs">
+      <DependentUpon>PaymentHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\FinanceDetailedStudentFeeAmount.ashx.cs">
+      <DependentUpon>FinanceDetailedStudentFeeAmount.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\FinanceDropDownLoader.ashx.cs">
+      <DependentUpon>FinanceDropDownLoader.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\FinanceFeeManagement.ashx.cs">
+      <DependentUpon>FinanceFeeManagement.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\FinanceFeeMappingStudent.ashx.cs">
+      <DependentUpon>FinanceFeeMappingStudent.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\FinanceGetStudent.ashx.cs">
+      <DependentUpon>FinanceGetStudent.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\FinancePaymentCollection.ashx.cs">
+      <DependentUpon>FinancePaymentCollection.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\FinancePaymentHistory.ashx.cs">
+      <DependentUpon>FinancePaymentHistory.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\FinanceStudentFeeMappingSave.ashx.cs">
+      <DependentUpon>FinanceStudentFeeMappingSave.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\MasterPage.ashx.cs">
+      <DependentUpon>MasterPage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\SessionExtend.ashx.cs">
+      <DependentUpon>SessionExtend.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\UserProfileImg.ashx.cs">
+      <DependentUpon>UserProfileImg.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Students\StudentSearch.aspx.cs">
+      <DependentUpon>StudentSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Students\StudentSearch.aspx.designer.cs">
+      <DependentUpon>StudentSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\AppMessageUC.ascx.cs">
+      <DependentUpon>AppMessageUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\AppMessageUC.ascx.designer.cs">
+      <DependentUpon>AppMessageUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\MarkAttendance.aspx.cs">
+      <DependentUpon>MarkAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\MarkAttendance.aspx.designer.cs">
+      <DependentUpon>MarkAttendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\MarkHolidays.aspx.cs">
+      <DependentUpon>MarkHolidays.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\MarkHolidays.aspx.designer.cs">
+      <DependentUpon>MarkHolidays.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\ViewAttendance.aspx.cs">
+      <DependentUpon>ViewAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\ViewAttendance.aspx.designer.cs">
+      <DependentUpon>ViewAttendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\AssignTeacher.aspx.cs">
+      <DependentUpon>AssignTeacher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Configuration\AssignTeacher.aspx.designer.cs">
+      <DependentUpon>AssignTeacher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\CourseExamMapping.aspx.cs">
+      <DependentUpon>CourseExamMapping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Configuration\CourseExamMapping.aspx.designer.cs">
+      <DependentUpon>CourseExamMapping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\Courses.aspx.cs">
+      <DependentUpon>Courses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Configuration\Courses.aspx.designer.cs">
+      <DependentUpon>Courses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\CourseSubjectMapping.aspx.cs">
+      <DependentUpon>CourseSubjectMapping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Configuration\CourseSubjectMapping.aspx.designer.cs">
+      <DependentUpon>CourseSubjectMapping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\Department.aspx.cs">
+      <DependentUpon>Department.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Configuration\Department.aspx.designer.cs">
+      <DependentUpon>Department.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\Exam.aspx.cs">
+      <DependentUpon>Exam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Configuration\Exam.aspx.designer.cs">
+      <DependentUpon>Exam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\HolidayMaster.aspx.cs">
+      <DependentUpon>HolidayMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Configuration\HolidayMaster.aspx.designer.cs">
+      <DependentUpon>HolidayMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\RoleMenuMapping.aspx.cs">
+      <DependentUpon>RoleMenuMapping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Configuration\RoleMenuMapping.aspx.designer.cs">
+      <DependentUpon>RoleMenuMapping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\Subject.aspx.cs">
+      <DependentUpon>Subject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Configuration\Subject.aspx.designer.cs">
+      <DependentUpon>Subject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\TimetableConfig.aspx.cs">
+      <DependentUpon>TimetableConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Configuration\TimetableConfig.aspx.designer.cs">
+      <DependentUpon>TimetableConfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\UnlockUser.aspx.cs">
+      <DependentUpon>UnlockUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Configuration\UnlockUser.aspx.designer.cs">
+      <DependentUpon>UnlockUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\ViewCourseExamMapping.aspx.cs">
+      <DependentUpon>ViewCourseExamMapping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Configuration\ViewCourseExamMapping.aspx.designer.cs">
+      <DependentUpon>ViewCourseExamMapping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\ViewCourseSubjectMapping.aspx.cs">
+      <DependentUpon>ViewCourseSubjectMapping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Configuration\ViewCourseSubjectMapping.aspx.designer.cs">
+      <DependentUpon>ViewCourseSubjectMapping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error\404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error\404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error\500.aspx.cs">
+      <DependentUpon>500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error\500.aspx.designer.cs">
+      <DependentUpon>500.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gallery\ManageAlbum.aspx.cs">
+      <DependentUpon>ManageAlbum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gallery\ManageAlbum.aspx.designer.cs">
+      <DependentUpon>ManageAlbum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gallery\ViewAlbum.aspx.cs">
+      <DependentUpon>ViewAlbum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gallery\ViewAlbum.aspx.designer.cs">
+      <DependentUpon>ViewAlbum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gallery\ViewAlbumImage.aspx.cs">
+      <DependentUpon>ViewAlbumImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gallery\ViewAlbumImage.aspx.designer.cs">
+      <DependentUpon>ViewAlbumImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Announcement.ashx.cs">
+      <DependentUpon>Announcement.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\ApplicationConfig.ashx.cs">
+      <DependentUpon>ApplicationConfig.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\AssignTeacher.ashx.cs">
+      <DependentUpon>AssignTeacher.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Attendance.ashx.cs">
+      <DependentUpon>Attendance.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\ChangePassword.ashx.cs">
+      <DependentUpon>ChangePassword.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Communication.ashx.cs">
+      <DependentUpon>Communication.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\CommunicationOperation.ashx.cs">
+      <DependentUpon>CommunicationOperation.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Configuration.ashx.cs">
+      <DependentUpon>Configuration.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\CourseMapping.ashx.cs">
+      <DependentUpon>CourseMapping.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Dashboard.ashx.cs">
+      <DependentUpon>Dashboard.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\DownloadImage.ashx.cs">
+      <DependentUpon>DownloadImage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\DropdownBind.ashx.cs">
+      <DependentUpon>DropdownBind.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\HolidayList.ashx.cs">
+      <DependentUpon>HolidayList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\ImageHandler.ashx.cs">
+      <DependentUpon>ImageHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\LoginAuthenticate.ashx.cs">
+      <DependentUpon>LoginAuthenticate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Logout.ashx.cs">
+      <DependentUpon>Logout.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\ManageStudents.ashx.cs">
+      <DependentUpon>ManageStudents.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\ManageUser.ashx.cs">
+      <DependentUpon>ManageUser.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\masters.ashx.cs">
+      <DependentUpon>masters.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\SmsApproval.ashx.cs">
+      <DependentUpon>SmsApproval.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Promote.ashx.cs">
+      <DependentUpon>Promote.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Shuffle.ashx.cs">
+      <DependentUpon>Shuffle.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Timetable.ashx.cs">
+      <DependentUpon>Timetable.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Transactions.ashx.cs">
+      <DependentUpon>Transactions.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\UnlockUser.ashx.cs">
+      <DependentUpon>UnlockUser.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\UserAttendance.ashx.cs">
+      <DependentUpon>UserAttendance.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ImageUtiliy\ImageUtility.cs" />
+    <Compile Include="InternalMail\Compose.aspx.cs">
+      <DependentUpon>Compose.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InternalMail\Compose.aspx.designer.cs">
+      <DependentUpon>Compose.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InternalMail\Inbox.aspx.cs">
+      <DependentUpon>Inbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InternalMail\Inbox.aspx.designer.cs">
+      <DependentUpon>Inbox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LandingPage\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LandingPage\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LandingPage\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LandingPage\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\User.Master.cs">
+      <DependentUpon>User.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\User.Master.designer.cs">
+      <DependentUpon>User.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sms\AppMessage.aspx.cs">
+      <DependentUpon>AppMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sms\AppMessage.aspx.designer.cs">
+      <DependentUpon>AppMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sms\SmsApproval.aspx.cs">
+      <DependentUpon>SmsApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sms\SmsApproval.aspx.designer.cs">
+      <DependentUpon>SmsApproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Promotion\Promote.aspx.cs">
+      <DependentUpon>Promote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Promotion\Promote.aspx.designer.cs">
+      <DependentUpon>Promote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Promotion\ShuffleStudents.aspx.cs">
+      <DependentUpon>ShuffleStudents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Promotion\ShuffleStudents.aspx.designer.cs">
+      <DependentUpon>ShuffleStudents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sms\UserMessage.aspx.cs">
+      <DependentUpon>UserMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sms\UserMessage.aspx.designer.cs">
+      <DependentUpon>UserMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Students\StudentEnrollment.aspx.cs">
+      <DependentUpon>StudentEnrollment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Students\StudentEnrollment.aspx.designer.cs">
+      <DependentUpon>StudentEnrollment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Students\StudentInfo.aspx.cs">
+      <DependentUpon>StudentInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Students\StudentInfo.aspx.designer.cs">
+      <DependentUpon>StudentInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\TimeoutControl.ascx.cs">
+      <DependentUpon>TimeoutControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\TimeoutControl.ascx.designer.cs">
+      <DependentUpon>TimeoutControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Academic.aspx.cs">
+      <DependentUpon>Academic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Academic.aspx.designer.cs">
+      <DependentUpon>Academic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Attendance.aspx.cs">
+      <DependentUpon>Attendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Attendance.aspx.designer.cs">
+      <DependentUpon>Attendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ExamSchedule.aspx.cs">
+      <DependentUpon>ExamSchedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\ExamSchedule.aspx.designer.cs">
+      <DependentUpon>ExamSchedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Homework.aspx.cs">
+      <DependentUpon>Homework.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Homework.aspx.designer.cs">
+      <DependentUpon>Homework.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\PersonalInfo.aspx.cs">
+      <DependentUpon>PersonalInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\PersonalInfo.aspx.designer.cs">
+      <DependentUpon>PersonalInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Timetable.aspx.cs">
+      <DependentUpon>Timetable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Timetable.aspx.designer.cs">
+      <DependentUpon>Timetable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\PersonalInfo.aspx.cs">
+      <DependentUpon>PersonalInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\PersonalInfo.aspx.designer.cs">
+      <DependentUpon>PersonalInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserEnrollment.aspx.cs">
+      <DependentUpon>UserEnrollment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\UserEnrollment.aspx.designer.cs">
+      <DependentUpon>UserEnrollment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserInfo.aspx.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\UserInfo.aspx.designer.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resource\css\bootstrap.css.map" />
+    <Content Include="Resource\css\bootstrap.min.css.map" />
+    <Content Include="Resource\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Resource\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Resource\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Resource\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Resource\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Resource\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Resource\font-awesome\less\animated.less" />
+    <Content Include="Resource\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Resource\font-awesome\less\core.less" />
+    <Content Include="Resource\font-awesome\less\fixed-width.less" />
+    <Content Include="Resource\font-awesome\less\font-awesome.less" />
+    <Content Include="Resource\font-awesome\less\icons.less" />
+    <Content Include="Resource\font-awesome\less\larger.less" />
+    <Content Include="Resource\font-awesome\less\list.less" />
+    <Content Include="Resource\font-awesome\less\mixins.less" />
+    <Content Include="Resource\font-awesome\less\path.less" />
+    <Content Include="Resource\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Resource\font-awesome\less\stacked.less" />
+    <Content Include="Resource\font-awesome\less\variables.less" />
+    <Content Include="Resource\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Resource\font-awesome\scss\_animated.scss" />
+    <Content Include="Resource\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Resource\font-awesome\scss\_core.scss" />
+    <Content Include="Resource\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Resource\font-awesome\scss\_icons.scss" />
+    <Content Include="Resource\font-awesome\scss\_larger.scss" />
+    <Content Include="Resource\font-awesome\scss\_list.scss" />
+    <Content Include="Resource\font-awesome\scss\_mixins.scss" />
+    <Content Include="Resource\font-awesome\scss\_path.scss" />
+    <Content Include="Resource\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Resource\font-awesome\scss\_stacked.scss" />
+    <Content Include="Resource\font-awesome\scss\_variables.scss" />
+    <Content Include="Resource\css\plugins\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Resource\css\plugins\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Resource\css\plugins\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Resource\css\plugins\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Resource\css\plugins\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Resource\locales\en.json" />
+    <Content Include="Resource\locales\es.json" />
+    <Content Include="MasterPage\AdminMaster.Master" />
+    <Content Include="Handlers\masters.ashx" />
+    <Content Include="packages.config" />
+    <Content Include="Handlers\LoginAuthenticate.ashx" />
+    <Content Include="Handlers\Configuration.ashx" />
+    <None Include="Properties\PublishProfiles\PrezonsApplication.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ApiLibraryInterface\ApiUtility.csproj">
+      <Project>{c0038965-f38c-48cc-8192-38c891da19a7}</Project>
+      <Name>ApiUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccessComponent\DataAccessComponent.csproj">
+      <Project>{ba9b50e3-18c4-40eb-921d-94c622c6af68}</Project>
+      <Name>DataAccessComponent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmailUtility\UtilityComponent.csproj">
+      <Project>{72b7362f-3262-4694-8828-905733c4763f}</Project>
+      <Name>UtilityComponent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityComponent\EntityComponent.csproj">
+      <Project>{f3d357aa-92fc-4736-81cd-fb02e7662f35}</Project>
+      <Name>EntityComponent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExceptionComponent\ExceptionComponent.csproj">
+      <Project>{de51dcd8-01cf-4ed0-bbce-35f296a9fd47}</Project>
+      <Name>ExceptionComponent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ThemeComponent\ThemeComponent.csproj">
+      <Project>{27f7896c-48ed-4e6f-a56a-4f77b2ac6a37}</Project>
+      <Name>ThemeComponent</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CAdmin\" />
+    <Folder Include="Export\" />
+    <Folder Include="Import\" />
+    <Folder Include="Report\" />
+    <Folder Include="Resource\css\plugins\awesome-bootstrap-checkbox\" />
+    <Folder Include="Resource\css\plugins\bootstrap-markdown\" />
+    <Folder Include="Resource\css\plugins\bootstrap-rtl\" />
+    <Folder Include="Resource\css\plugins\bootstrapTour\" />
+    <Folder Include="Resource\css\plugins\c3\" />
+    <Folder Include="Resource\css\plugins\chartist\" />
+    <Folder Include="Resource\js\demo\" />
+    <Folder Include="Resource\js\plugins\colorpicker\" />
+    <Folder Include="Resource\js\plugins\jqGrid\i18n\" />
+    <Folder Include="Uploads\Profile\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52138</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:7000/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
